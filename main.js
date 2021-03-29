@@ -16,13 +16,9 @@ let arr = [
     'travel',   
 ]
 
-
-
 for (let i = 0; i < cardsTextSubtitle.length; i++) {
-    let cardTextSubtitle = cardsTextSubtitle[i];
-    button.addEventListener('click', function () { 
-        cardTextSubtitle.innerHTML = arr[Math.floor(Math.random() * arr.length)];                   
-    });           
+    let cardTextSubtitle = cardsTextSubtitle[i];             
+    cardTextSubtitle.innerHTML = arr[Math.floor(Math.random() * arr.length)];                     
 }; 
 
 
@@ -31,9 +27,9 @@ for (let i = 0; i < cards.length; i++) {
     card.addEventListener('click', function () { 
         card.firstElementChild.classList.toggle('card__back-side--rotate');        
         card.lastElementChild.classList.toggle('card__front-side--rotate');                
-    });
-    
+    });    
 };
 
-
-// body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+button.addEventListener('click', function () { 
+    location.reload();           
+});
